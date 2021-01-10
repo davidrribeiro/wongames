@@ -9,8 +9,7 @@ const Wrapper = styled.div`
 
   p{
     margin-top: 1rem;
-  }
-`
+  }`
 
 const HomePage = () => {
 
