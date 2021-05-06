@@ -10,4 +10,17 @@ describe('<Button />', () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it('should render button as a link', () => {
+    renderWithTheme(
+      <Button as="a" href="/link">
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRule('link', { name: /buy now/i })).toHaveAttribute(
+      'href',
+      '/link'
+    )
+  })
 })
